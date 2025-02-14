@@ -1,0 +1,14 @@
+func main() {
+    int i;
+    i = 0;
+    while (i) < (10*4%2/(3-4+(3+3))) {
+        if i >= 4 {
+            break;
+        }
+        print(i);
+        i = i + 1;
+    }
+
+    a[3] = func1(3, s[3]);
+    x = a[3];
+}
