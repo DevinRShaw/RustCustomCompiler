@@ -1,0 +1,14 @@
+func add(int a){
+
+    int [1] r;
+
+    a = a + 1; 
+
+    break;
+}
+
+
+func sub(){}
+
+
+

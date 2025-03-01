@@ -1,0 +1,29 @@
+func main() {
+  #variable declarations
+    int a; 
+    int b; 
+    int c; 
+
+  #complex assignment 
+    a = c * (1 + b);
+
+  #function call assignment 
+    b = test(a,b,c);
+    
+  #array declaration, assignment and access
+    int [5] d;
+    d[3] = a;
+    b = d[3];
+
+  #print statment 
+    read(a);
+    print(a);
+
+    
+}
+
+#function declaration 
+func test(int a, int b, int c){
+  #return statment 
+    return a + b + c; 
+}

@@ -7,9 +7,13 @@ use std::env;
 use std::fs;
 
 use rustcompiler::phases::lexer::*;
-use rustcompiler::phases::parser::*;
+use rustcompiler::phases::semantic_parser::*;
 
 mod phases;
+mod interpreter; 
+
+
+
 
 //The reading of file, command args and lex call are same as example 
 fn main() {
@@ -62,16 +66,21 @@ fn main() {
     println!("{code}");
     println!("Here are the Results:");
     println!("----------------------");
+    /*
     for t in &tokens {
       println!("{:?}", t);
     }
+    */
 
     //parser part added from phase 2 
     let mut index: usize = 0;
     match parse_program(&tokens, &mut index) {
 
-    Ok(()) => {
+    Ok(generated_code) => {
         println!("Program Parsed Successfully.");
+        interpreter::execute_ir(&generated_code);
+        print!("{}", generated_code);
+
     }
 
     Err(message) => {
