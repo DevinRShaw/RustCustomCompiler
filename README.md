@@ -13,6 +13,7 @@ The Teh Terik Compiler is a basic compiler targeting a toy language called Teh T
 - `src/`:
   - `lexer.rs`: Handles the lexing phase, converting input text into tokens.
   - `parser.rs`: Handles the parsing phase via recursive descent, processing tokens into an abstract syntax tree (AST).
+  - `semantic_parser.rs`: Builds upon the parsing phase to include code generation and semantic error checking.
   - `phases/`: Contains files that implement various stages of the compiler, corresponding to lexing, parsing, and other necessary phases.
   
 - `tests/`: Contains test files that check functionality for different phases of the compiler. Each phase has a suite of tests to ensure correctness.
